@@ -1,0 +1,56 @@
+[project]
+name = "my-bulletin-board-1"
+version = "0.1.0"
+authors = [{name="Choi Won Wong", email="chldnjsdnd12@gmail.com"}]
+description = "Study & Exprience for FastAPI"
+requires-python = "==3.12.11"
+dependencies = [
+    "fastapi[standard]>=0.116.1",
+    "ruff>=0.12.5",
+]
+
+[tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
+extend-select = [
+    # 기본 추천
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "F",    # pyflakes
+    "I",    # isort (import 정렬)
+    "B",    # flake8-bugbear (버그 방지)
+    "C4",   # flake8-comprehensions (리스트/딕트 컴프리헨션)
+    "UP",   # pyupgrade (최신 Python 문법)
+
+    # FastAPI 개발에 특히 유용
+    "N",    # pep8-naming (네이밍 컨벤션)
+    "T20",  # flake8-print (print 문 체크)
+    "PL",   # pylint (코드 품질)
+    "RUF",  # ruff 특화 규칙
+#    "S",    # flake8-bandit (보안 이슈)보안
+#    "PTH",  # flake8-use-pathlib (pathlib 사용 권장)
+
+    # 타입 관련 (FastAPI + Pydantic)
+    "TCH",  # TYPE_CHECKING 블록 관리
+    "FA",   # flake8-future-annotations
+
+    # 성능 관련
+    "PERF", # perflint (성능 최적화)
+    "FURB", # refurb (코드 개선)
+]
+
+ignore = [
+    "S101",    # assert 사용 허용 (테스트에서 필요)
+    "PLR0913", # 함수 매개변수 개수 제한 완화 (FastAPI 엔드포인트에서 많이 사용)
+    "B008",    # 함수 인자로 Depends() 사용 허용
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**/*.py" = [
+    "S101",    # 테스트에서 assert 허용
+    "PLR2004", # 테스트에서 매직넘버 허용
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["app", "src"]  # 프로젝트 모듈명으로 변경

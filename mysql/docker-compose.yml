@@ -1,0 +1,14 @@
+services:
+  db:
+    image: mysql:8.0.43
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: wong
+      MYSQL_DATABASE: bulletin1 # 초기 생성할 데이터베이스 이름 (선택 사항)
+      MYSQL_USER: user1 # 초기 생성할 사용자 이름 (선택 사항)
+      MYSQL_PASSWORD: user1 # 초기 생성할 사용자 비밀번호 (선택 사항)
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql-data:/var/lib/mysql
+    # (this is just an example, not intended to be a production configuration)
