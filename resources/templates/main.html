@@ -162,30 +162,32 @@
 
         <!-- 백엔드 연동 후 사용할 Jinja2 템플릿 (주석 처리) -->
 
-        {% if posts %}
-            {% for post in posts %}
-                <div class="post" onclick="location.href='/posts/{{ post.post_number }}'">
-                    <div class="post-content">
-                        <div class="post-header">
-                            <div class="post-number">{{ post.post_number }}</div>
-                            <div class="post-title">{{ post.title }}</div>
-                        </div>
-                        <div class="post-meta">
-                            <span>{{ post.author }}</span>
-                            <span>{{ post.created_date }}</span>
-                            <span>{{ post.view_count }}</span>
-                            <span>{{ post.like_count }}</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="post-divider"></div>
-            {% endfor %}
-        {% else %}
-            <div class="empty-state">
-                <div class="empty-state-icon">📝</div>
-                <div class="empty-state-text">아직 등록된 자료가 없습니다.</div>
-            </div>
-        {% endif %}
+<!--        {% if posts %}-->
+<!--            {% for post in posts %}-->
+<!--                <div class="post" onclick="location.href='/posts/{{ post.post_number }}'">-->
+<!--                    <div class="post-content">-->
+<!--                        <div class="post-header">-->
+<!--                            <div class="post-number">{{ post.post_number }}</div>-->
+<!--                            <div class="post-title">{{ post.title }}</div>-->
+<!--                        </div>-->
+<!--                        <div class="post-meta">-->
+<!--                            <span>{{ post.author }}</span>-->
+<!--                            <span>{{ post.created_date }}</span>-->
+<!--                            <span>{{ post.view_count }}</span>-->
+<!--                            <span>{{ post.like_count }}</span>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                {% if not loop.last %}-->
+<!--                    <div class="post-divider"></div>-->
+<!--                {% endif %}-->
+<!--            {% endfor %}-->
+<!--        {% else %}-->
+<!--            <div class="empty-state">-->
+<!--                <div class="empty-state-icon">📝</div>-->
+<!--                <div class="empty-state-text">아직 등록된 자료가 없습니다.</div>-->
+<!--            </div>-->
+<!--        {% endif %}-->
     </div>
 </div>
 
