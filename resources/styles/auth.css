@@ -1,0 +1,107 @@
+/* Override base body for auth page layout */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1; /* main 영역이 남은 공간을 모두 차지하도록 함 */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* 상단에 정렬 */
+    padding: 2rem;
+    padding-top: 10vh; /* 상단 여백 추가 */
+}
+
+.auth-container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    position: relative; /* 자식 absolute 요소의 기준 */
+}
+
+.auth-form-wrapper {
+    position: relative;
+    overflow: hidden; /* 폼이 겹쳐질 때 넘치는 부분 숨김 */
+    transition: height 0.4s ease-in-out; /* 높이 변화에 애니메이션 적용 */
+}
+
+.auth-tabs {
+    display: flex;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.auth-tab {
+    flex-grow: 1;
+    padding: 0.8rem;
+    text-align: center;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #888;
+    transition: color 0.3s;
+}
+
+.auth-tab.active {
+    color: #333;
+    border-bottom: 2px solid #4DB6AC;
+}
+
+.auth-form {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    visibility: hidden;
+}
+
+.auth-form.active {
+    opacity: 1;
+    visibility: visible;
+    position: static; /* 활성화된 폼만 문서 흐름에 포함 */
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 0.9rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #4DB6AC;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #4DB6AC;
+}

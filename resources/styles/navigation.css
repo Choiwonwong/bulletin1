@@ -1,0 +1,58 @@
+.main-header {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0 2rem;
+    width: 100%;
+}
+
+.navbar {
+    position: relative;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.navbar-right {
+    margin-left: auto; /* 자동으로 오른쪽 끝으로 밀어줌 */
+    z-index: 2;
+}
+
+.dinosaur-icon {
+    height: 50px;
+    width: 50px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.dinosaur-icon:hover {
+    transform: scale(1.2);
+    transition: transform 0.1s ease-in-out, background-color 0.1s ease-in-out;
+}
+
+.auth-button {
+    text-decoration: none;
+    color: #4ECDC4;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.auth-button:hover {
+    color: white;
+    background-color: #4DB6AC;
+}

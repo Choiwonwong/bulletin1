@@ -1,0 +1,27 @@
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Consistent scrollbar behavior to prevent layout shifts */
+html {
+    scrollbar-gutter: stable;
+}
+
+/* Fallback for browsers that don't support scrollbar-gutter */
+@supports not (scrollbar-gutter: stable) {
+    html {
+        --scrollbar-width: calc(100vw - 100%);
+        padding-right: var(--scrollbar-width);
+    }
+}
+
+/* Base body styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: #f0f2f5; /* Default background from main.html */
+    color: #333;
+    line-height: 1.6;
+}

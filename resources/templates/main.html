@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dino</title>
+    <link rel="stylesheet" href="/styles/base.css">
+    <link rel="stylesheet" href="/styles/navigation.css">
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+{% include 'navigation.html' %}
+
+<div class="main-container">
+    <div class="page-header">
+        <div class="header-content">
+            <div class="header-left">
+                <span class="speech-bubble">💬</span>
+                <h1 class="page-title">자유롭게 발산하기</h1>
+            </div>
+            <a href="/new-post" class="edit-link">
+                <img src="/static/new_post_icon.png" alt="새 글 작성" class="new-post-icon">
+            </a>
+        </div>
+    </div>
+
+    <div class="post-list">
+        <div class="post" onclick="location.href='/posts/9'">
+            <div class="post-content">
+                <div class="post-header">
+                    <div class="post-number">9</div>
+                    <div class="post-title">인공지능과 머신러닝의 미래 전망</div>
+                </div>
+                <div class="post-meta">
+                    <span>AI연구자</span>
+                    <span>2025.07.20</span>
+                    <span>조회 3,500</span>
+                    <span>좋아요 82</span>
+                </div>
+            </div>
+        </div>
+        <div class="post" onclick="location.href='/posts/8'">
+            <div class="post-content">
+                <div class="post-header">
+                    <div class="post-number">8</div>
+                    <div class="post-title">Git & GitHub 협업 가이드</div>
+                </div>
+                <div class="post-meta">
+                    <span>Git초보</span>
+                    <span>2025.07.21</span>
+                    <span>조회 890</span>
+                    <span>좋아요 21</span>
+                </div>
+            </div>
+        </div>
+        <div class="post" onclick="location.href='/posts/7'">
+            <div class="post-content">
+                <div class="post-header">
+                    <div class="post-number">7</div>
+                    <div class="post-title">데이터베이스 설계와 SQL 최적화 팁</div>
+                </div>
+                <div class="post-meta">
+                    <span>DB마스터</span>
+                    <span>2025.07.22</span>
+                    <span>조회 1,320</span>
+                    <span>좋아요 37</span>
+                </div>
+            </div>
+        </div>
+        <div class="post" onclick="location.href='/posts/6'">
+            <div class="post-content">
+                <div class="post-header">
+                    <div class="post-number">6</div>
+                    <div class="post-title">클라우드 컴퓨팅 기초: AWS, Azure, GCP 비교</div>
+                </div>
+                <div class="post-meta">
+                    <span>클라우드맨</span>
+                    <span>2025.07.23</span>
+                    <span>조회 2,750</span>
+                    <span>좋아요 68</span>
+                </div>
+            </div>
+        </div>
+        <div class="post" onclick="location.href='/posts/5'">
+            <div class="post-content">
+                <div class="post-header">
+                    <div class="post-number">5</div>
+                    <div class="post-title">CSS Flexbox와 Grid 심화 과정</div>
+                </div>
+                <div class="post-meta">
+                    <span>디자이너윤</span>
+                    <span>2025.07.24</span>
+                    <span>조회 980</span>
+                    <span>좋아요 12</span>
+                </div>
+            </div>
+        </div>
+        <div class="post" onclick="location.href='/posts/4'">
+            <div class="post-content">
+                <div class="post-header">
+                    <div class="post-number">4</div>
+                    <div class="post-title">Python Flask를 이용한 웹 서비스 개발</div>
+                </div>
+                <div class="post-meta">
+                    <span>파이썬쟁이</span>
+                    <span>2025.07.25</span>
+                    <span>조회 1,500</span>
+                    <span>좋아요 28</span>
+                </div>
+            </div>
+        </div>
+        <div class="post" onclick="location.href='/posts/3'">
+            <div class="post-content">
+                <div class="post-header">
+                    <div class="post-number">3</div>
+                    <div class="post-title">Node.js와 Express를 활용한 RESTful API 구축</div>
+                </div>
+                <div class="post-meta">
+                    <span>프론트엔드김</span>
+                    <span>2025.07.26</span>
+                    <span>조회 2,100</span>
+                    <span>좋아요 55</span>
+                </div>
+            </div>
+        </div>
+        <div class="post" onclick="location.href='/posts/2'">
+            <div class="post-content">
+                <div class="post-header">
+                    <div class="post-number">2</div>
+                    <div class="post-title">React로 만드는 모던 웹 애플리케이션 가이드</div>
+                </div>
+                <div class="post-meta">
+                    <span>개발자123</span>
+                    <span>2025.07.27</span>
+                    <span>조회 1,856</span>
+                    <span>좋아요 45</span>
+                </div>
+            </div>
+        </div>
+        <div class="post" onclick="location.href='/posts/1'">
+            <div class="post-content">
+                <div class="post-header">
+                    <div class="post-number">1</div>
+                    <div class="post-title">이곳에는 게시글 제목이 노출됩니다.</div>
+                </div>
+                <div class="post-meta">
+                    <span>익명</span>
+                    <span>2025.07.28</span>
+                    <span>조회 3,203</span>
+                    <span>좋아요 30</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 백엔드 연동 후 사용할 Jinja2 템플릿 (주석 처리) -->
+
+<!--        {% if posts %}-->
+<!--            {% for post in posts %}-->
+<!--            <div class="post" onclick="location.href='/posts/{{ post.post_number }}'">-->
+<!--                <div class="post-content">-->
+<!--                    <div class="post-header">-->
+<!--                        <div class="post-number">{{ post.post_number }}</div>-->
+<!--                        <div class="post-title">{{ post.title }}</div>-->
+<!--                    </div>-->
+<!--                    <div class="post-meta">-->
+<!--                        <span>{{ post.author }}</span>-->
+<!--                        <span>{{ post.created_date }}</span>-->
+<!--                        <span>{{ post.view_count }}</span>-->
+<!--                        <span>{{ post.like_count }}</span>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--            {% endfor %}-->
+<!--        {% else %}-->
+<!--            <div class="empty-state">-->
+<!--                <div class="empty-state-icon">📝</div>-->
+<!--                <div class="empty-state-text">아직 등록된 자료가 없습니다.</div>-->
+<!--            </div>-->
+<!--        {% endif %}-->
+    </div>
+</div>
+
+<script>
+    // 클릭 이벤트 처리
+    document.querySelectorAll('.post').forEach(item => {
+        item.addEventListener('click', function (e) {
+            // 실제 링크 이동은 onclick 속성으로 처리
+            // 여기서는 추가적인 클릭 효과나 분석 코드를 넣을 수 있음
+        });
+    });
+
+    // 편집 버튼 클릭 처리
+    // 이미지를 사용하므로, edit-button 클래스 대신 new-post-icon 클래스를 참조합니다.
+    document.querySelector('.edit-link')?.addEventListener('click', function (e) {
+        // 새 글 작성 페이지로 이동하는 것은 href 속성으로 처리됩니다.
+        // 여기서는 추가적인 클릭 효과나 분석 코드를 넣을 수 있습니다.
+        console.log('새 글 작성 버튼 클릭됨');
+    });
+</script>
+</body>
+</html>
