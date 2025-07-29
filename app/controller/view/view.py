@@ -5,9 +5,7 @@ from starlette.templating import Jinja2Templates
 
 templates = Jinja2Templates(directory="resources/templates")
 
-api_router_view = APIRouter(
-    tags=["post"],
-)
+api_router_view = APIRouter()
 
 
 @api_router_view.get("/", response_class=HTMLResponse, tags=["main"])
@@ -21,5 +19,5 @@ async def get_post_list_view(request: Request):
 
 
 @api_router_view.get("/auth", response_class=HTMLResponse, tags=["auth"])
-async def get_post_list_view(request: Request):
+async def get_auth_view(request: Request):
     return templates.TemplateResponse(request=request, name="auth.html")
