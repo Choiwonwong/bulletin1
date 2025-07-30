@@ -1,10 +1,8 @@
 from __future__ import annotations
 
 from dto.delete_post import DeletePost
-from fastapi import Depends
 from sqlmodel import Session, asc, desc, select
 
-from app.config.database import get_session
 from app.dto.create_post import CreatePost
 from app.dto.update_post import UpdatePost
 from app.entity.post import Post
@@ -12,7 +10,7 @@ from app.repository.post_repository import PostRepository
 
 
 class PostRepositoryImpl(PostRepository):
-    def __init__(self, session: Session = Depends(get_session)):
+    def __init__(self, session: Session):
         self.session = session
 
     def get_all(self, sort: str | None = "desc") -> list[Post]:

@@ -7,7 +7,6 @@ from dto.delete_post import DeletePost
 from dto.post_response import PostResponse
 from dto.update_post import UpdatePost
 from repository.post_repository import PostRepository
-from repository.post_repository_impl import PostRepositoryImpl
 from service.post_service import PostService
 
 if TYPE_CHECKING:
@@ -15,8 +14,8 @@ if TYPE_CHECKING:
 
 
 class PostServiceImpl(PostService):
-    def __init__(self):
-        self.post_repository: PostRepository = PostRepositoryImpl()
+    def __init__(self, post_repository: PostRepository):
+        self.post_repository: PostRepository = post_repository
 
     def get_posts(self, sort: str | None) -> list[PostResponse]:
         posts: list[Post] = self.post_repository.get_all(sort)
