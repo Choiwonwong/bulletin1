@@ -1,11 +1,15 @@
 from abc import ABC, abstractmethod
 
 from dto.create_post import CreatePost
+from dto.delete_post import DeletePost
 from dto.post_response import PostResponse
 from dto.update_post import UpdatePost
+from repository.post_repository import PostRepository
 
 
 class PostService(ABC):
+    post_repository: PostRepository
+
     @abstractmethod
     def get_posts(self, sort: str | None) -> list[PostResponse]:
         pass
@@ -23,5 +27,5 @@ class PostService(ABC):
         pass
 
     @abstractmethod
-    def delete_post(self, post_number: int) -> int:
+    def delete_post(self, delete_post: DeletePost) -> int:
         pass

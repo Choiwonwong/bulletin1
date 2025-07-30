@@ -1,9 +1,10 @@
 from __future__ import annotations
 
-from abc import ABC
+from abc import ABC, abstractmethod
 from typing import TYPE_CHECKING
 
 from dto.create_post import CreatePost
+from dto.delete_post import DeletePost
 from dto.update_post import UpdatePost
 
 if TYPE_CHECKING:
@@ -11,22 +12,22 @@ if TYPE_CHECKING:
 
 
 class PostRepository(ABC):
-    # @abstractmethod
+    @abstractmethod
     def get_all(self, sort: str | None) -> list[Post]:
         pass
 
-    # @abstractmethod
+    @abstractmethod
     def get(self, post_number: int) -> Post | None:
         pass
 
-    # @abstractmethod
+    @abstractmethod
     def save(self, create_post: CreatePost) -> int:
         pass
 
-    # @abstractmethod
+    @abstractmethod
     def update(self, update_post: UpdatePost) -> int | None:
         pass
 
-    # @abstractmethod
-    def delete(self, post_number: int) -> int | None:
+    @abstractmethod
+    def delete(self, delete_post: DeletePost) -> int | None:
         pass

@@ -3,8 +3,6 @@ from uuid import UUID
 from pydantic import BaseModel
 
 
-class UpdatePost(BaseModel):
+class DeletePost(BaseModel):
     post_number: int
-    title: str | None
-    content: str | None
     user_id: UUID

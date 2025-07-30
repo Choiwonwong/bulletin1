@@ -2,8 +2,8 @@ from collections.abc import Generator
 
 from sqlmodel import Session, SQLModel, create_engine
 
-from app.entity.post import Post  # noqa
 from app.entity.user import User  # noqa
+from app.entity.post import Post  # noqa
 
 engine = None
 
