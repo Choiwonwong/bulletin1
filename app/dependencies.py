@@ -1,8 +1,9 @@
-from config.database import get_session
 from fastapi import Depends
-from repository.post_repository_impl import PostRepositoryImpl
-from service.post_service_impl import PostServiceImpl
 from sqlmodel import Session
+
+from app.config.database import get_session
+from app.repository.post_repository_impl import PostRepositoryImpl
+from app.service.post_service_impl import PostServiceImpl
 
 
 def get_post_repository(session: Session = Depends(get_session)) -> PostRepositoryImpl:

@@ -6,7 +6,7 @@ from sqlalchemy import BIGINT, TEXT, Column, Identity
 from sqlmodel import Field, Relationship, SQLModel
 
 if TYPE_CHECKING:
-    from entity.user import User
+    from app.entity.user import User
 
 
 class Post(SQLModel, table=True):

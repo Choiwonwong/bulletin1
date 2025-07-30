@@ -3,12 +3,12 @@ from __future__ import annotations
 from abc import ABC, abstractmethod
 from typing import TYPE_CHECKING
 
-from dto.create_post import CreatePost
-from dto.delete_post import DeletePost
-from dto.update_post import UpdatePost
+from app.dto.create_post import CreatePost
+from app.dto.delete_post import DeletePost
+from app.dto.update_post import UpdatePost
 
 if TYPE_CHECKING:
-    from entity.post import Post
+    from app.entity.post import Post
 
 
 class PostRepository(ABC):

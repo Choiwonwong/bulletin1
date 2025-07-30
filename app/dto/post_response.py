@@ -6,7 +6,7 @@ from typing import TYPE_CHECKING
 from pydantic import BaseModel
 
 if TYPE_CHECKING:
-    from entity.post import Post
+    from app.entity.post import Post
 
 
 class PostResponse(BaseModel):

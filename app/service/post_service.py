@@ -1,10 +1,10 @@
 from abc import ABC, abstractmethod
 
-from dto.create_post import CreatePost
-from dto.delete_post import DeletePost
-from dto.post_response import PostResponse
-from dto.update_post import UpdatePost
-from repository.post_repository import PostRepository
+from app.dto.create_post import CreatePost
+from app.dto.delete_post import DeletePost
+from app.dto.post_response import PostResponse
+from app.dto.update_post import UpdatePost
+from app.repository.post_repository import PostRepository
 
 
 class PostService(ABC):

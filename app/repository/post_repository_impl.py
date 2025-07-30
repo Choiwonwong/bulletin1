@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from dto.delete_post import DeletePost
+from app.dto.delete_post import DeletePost
 from sqlmodel import Session, asc, desc, select
 
 from app.dto.create_post import CreatePost
